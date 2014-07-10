@@ -1,7 +1,5 @@
-eid-idp (forked from https://code.google.com/p/eid-idp/)
-=======
-
 The eID Identity Provider is a simple IdP using the eID as authentication token.
+
 === 1. Introduction
 
 This project contains a fork for the source code tree of the eID Identity Provider.
@@ -12,7 +10,7 @@ The original source code is hosted at: http://code.google.com/p/eid-idp/
 
 The following is required for compiling the eID Trust Service software:
 * Sun Java 1.6.0_23
-* Apache Maven 3.0.1
+* Apache Maven 3.0.1 (newer versions does not work yet)
 
 
 === 3. Build
