@@ -37,8 +37,12 @@ First time you use an Eclipse workspace you might need to add the maven
 repository location. Do this via:
     mvn eclipse:add-maven-repo -Declipse.workspace=<location of your workspace>
 
+=== 5. How to start example
 
-=== 5. License
+If you only want to build/install/run a distro in a Centos/Redhat for testing purposes, please read installcentos.txt
+
+
+=== 6. License
 
 The license conditions can be found in the file: LICENSE.txt
 

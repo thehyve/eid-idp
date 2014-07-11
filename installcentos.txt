@@ -1,0 +1,43 @@
+Ex. how to build and run eID identity provider in Centos/Redhat
+
+Build the distro
+================
+
+- install JDK:
+sudo yum install java-devel
+
+- install Maven 3.0 (not newer versions)
+wget
+http://ftp.nluug.nl/internet/apache/maven/maven-3/3.0.5/binaries/apache-maven-3.0.5-bin.tar.gz
+
+uncompress and add the env variables to your ~/.bashrc file
+export M2_HOME=/usr/local/apache-maven/apache-maven-3.0.5
+export M2=$M2_HOME/bin
+export PATH=$M2:$PATH
+
+- run maven
+mvn clean install
+
+- goto your chosen distro (i'll useg distro for mysql) and build it
+mvn package
+
+Using the distro
+================
+
+- unzip distro in /opt folder
+- run scripts SQL to create database, permission and DDL.
+- run JBOSS distro
+
+$ pwd
+/opt/eid-idp-mysql-distribution/jboss/bin
+$ sudo bash run.sh -b 0.0.0.0
+
+Warnings:
+
+- be sure that ports 8009, 8080 and 8443 are free before running to avoid
+  error.
+- if you are running that in a VM, be sure the forwarding port is the same in
+  guest and host (8443 in both cases) because is needed for redirection in
+openID.
+
+
